@@ -5,17 +5,123 @@
 
 export const videos = [
   {
-    _id: "Wo5dMEP_BbI",
-    title: "Awesome Video about Coding",
+    _id: "dUvy11sfyHI",
+    title: "Fear House (2001) TRUE Story Explained in Hindi",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    creator: "Soham Shah",
+    creator: "Haunting Tube",
+    categoryName: "horror movie"
   },
   {
-    _id: "F_Riqjdh2oM",
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
-    creator: "Sentdex",
+    _id: "36o09Gci0y0",
+    title: "Chhorii (2021) Explained in Hindi",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Haunting Tube",
+    categoryName: "horror movie"
+  },
+  {
+    _id: "IBpK61cpDko",
+    title: "Conjuring 3 : The Devil Made me Do It (2021) Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Haunting Tube",
+    categoryName: "horror movie"
+  },
+  {
+    _id: "_OEyh7zrpTo",
+    title: "BAPHOMET (2021) Explained In Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Haunting Tube",
+    categoryName: "horror movie"
+  },
+  {
+    _id: "YxvjRPQ-jQw",
+    title: "SHUT IN (2022) Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Haunting Tube",
+    categoryName: "horror movie"
+  },
+  {
+    _id: "5x1ou1bP9YY",
+    title: "Limitless Movie (Full HD) Explained In Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Bollywood Silver Screen",
+    categoryName: "inspiring movie"
+  },
+  {
+    _id: "HDF1RAu-MTA",
+    title: "The Prestige Explained / Christopher Nolan Best Movie / IMDB 8.5",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Bollywood Silver Screen",
+    categoryName: "inspiring movie"
+  },
+  {
+    _id: "5HoQWrl98q4",
+    title: "The Losers Movie (Full HD) Explained In Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Bollywood Silver Screen",
+    categoryName: "inspiring movie"
+  },
+  {
+    _id: "ogF9OwPYqnI",
+    title: "Just Mercy Movie Explained In Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Bollywood Silver Screen",
+    categoryName: "inspiring movie"
+  },
+  {
+    _id: "gs-6VC-My0Y",
+    title: "THE SHAWSHANK REDEMPTION",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Bollywood Silver Screen",
+    categoryName: "inspiring movie"
+  },
+  {
+    _id: "tXf-1A9MEVw",
+    title: "Richie Rich Movie Story Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Movies At Glance",
+    categoryName: "comedy movie"
+  },
+  {
+    _id: "QG0XpPOpRQ8",
+    title: "Poor Boy Finds $ 1M Check & Becomes Rich Overnight ",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Movies At Glance",
+    categoryName: "comedy movie"
+  },
+  {
+    _id: "5shjaLzuq54",
+    title: "It's Kind of a Funny Story Movie Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Movies At Glance",
+    categoryName: "comedy movie"
+  },
+  {
+    _id: "LfY_EbscQWU",
+    title: "Yes Day (2021) Movie Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Movies At Glance",
+    categoryName: "comedy movie"
+  },
+  {
+    _id: "x3wdzPYYQ1o",
+    title: "Life as we know it Movie Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Movies At Glance",
+    categoryName: "comedy movie"
   },
 ];
