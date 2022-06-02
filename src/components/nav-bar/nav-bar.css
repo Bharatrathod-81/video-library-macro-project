@@ -1,11 +1,12 @@
 
 .nav-items{
-    width: 95%;
+    flex-grow: 1;
 }
 
 .menu-btn{
     font-size: 22px;
     font-weight: bold;
+    with: 1rem;
 }
 
 .logo1{
