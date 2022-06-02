@@ -10,7 +10,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Haunting Tube",
-    categoryName: "horror movie"
+    categoryName: "Horror Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "36o09Gci0y0",
@@ -18,7 +20,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Haunting Tube",
-    categoryName: "horror movie"
+    categoryName: "Horror Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "IBpK61cpDko",
@@ -26,7 +30,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Haunting Tube",
-    categoryName: "horror movie"
+    categoryName: "Horror Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "_OEyh7zrpTo",
@@ -34,7 +40,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Haunting Tube",
-    categoryName: "horror movie"
+    categoryName: "Horror Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "YxvjRPQ-jQw",
@@ -42,7 +50,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Haunting Tube",
-    categoryName: "horror movie"
+    categoryName: "Horror Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "5x1ou1bP9YY",
@@ -50,7 +60,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Bollywood Silver Screen",
-    categoryName: "inspiring movie"
+    categoryName: "Inspiring Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "HDF1RAu-MTA",
@@ -58,7 +70,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Bollywood Silver Screen",
-    categoryName: "inspiring movie"
+    categoryName: "Inspiring Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "5HoQWrl98q4",
@@ -66,7 +80,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Bollywood Silver Screen",
-    categoryName: "inspiring movie"
+    categoryName: "Inspiring Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "ogF9OwPYqnI",
@@ -74,7 +90,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Bollywood Silver Screen",
-    categoryName: "inspiring movie"
+    categoryName: "Inspiring Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "gs-6VC-My0Y",
@@ -82,7 +100,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Bollywood Silver Screen",
-    categoryName: "inspiring movie"
+    categoryName: "Inspiring Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "tXf-1A9MEVw",
@@ -90,7 +110,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Movies At Glance",
-    categoryName: "comedy movie"
+    categoryName: "Comedy Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "QG0XpPOpRQ8",
@@ -98,7 +120,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Movies At Glance",
-    categoryName: "comedy movie"
+    categoryName: "Comedy Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "5shjaLzuq54",
@@ -106,7 +130,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Movies At Glance",
-    categoryName: "comedy movie"
+    categoryName: "Comedy Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "LfY_EbscQWU",
@@ -114,7 +140,9 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Movies At Glance",
-    categoryName: "comedy movie"
+    categoryName: "Comedy Movie",
+    views: 6,
+    time:4
   },
   {
     _id: "x3wdzPYYQ1o",
@@ -122,6 +150,8 @@ export const videos = [
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
     creator: "Movies At Glance",
-    categoryName: "comedy movie"
+    categoryName: "Comedy Movie",
+    views: 6,
+    time:4
   },
 ];

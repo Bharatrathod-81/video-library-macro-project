@@ -1,4 +1,30 @@
-.App {
-  text-align: center;
+
+:root{
+  --primary-color :rgba(3, 124, 217, 0.996);
+  --text-color : white;
+  --bg-color : rgba(191, 186, 186, 0.549) ;
+  --card-text-color : rgb(65, 64, 64);
 }
 
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}

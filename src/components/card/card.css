@@ -1,0 +1,15 @@
+
+.title{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.creator-name{
+    font-size: small;
+    color: var(--card-text-color);
+}
+
+.views{
+    font-size: small;
+    color: var(--card-text-color);
+}
