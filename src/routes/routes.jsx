@@ -8,7 +8,7 @@ import { SideBar } from "../components/side-bar/side-bar";
 export const RoutesFunc = () => {
 
     return (
-        <div className="margin-smalla routes-body flex-row">
+        <div className=" flex-row">
             <div>
                 <SideBar/>
             </div>
