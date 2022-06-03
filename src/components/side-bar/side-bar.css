@@ -1,0 +1,27 @@
+
+
+.side-bar-body{
+    background-color: var(--text-color);
+    box-sizing: border-box;
+    height: 100vh;
+    border: 2px solid var(--bg-color);
+    margin-top: 0.5rem;
+    width: 12rem;
+    
+}
+
+.remove-sideBar{  
+    display: none;
+}
+
+
+.remove-btn{
+    position: absolute;
+    right: 9%;
+    top: 2%;
+    font-size: 25px;
+}
+
+.sideBar-item{
+    margin-left: 2rem;
+}

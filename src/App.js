@@ -7,8 +7,8 @@ import { RoutesFunc } from "./routes/routes";
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <RoutesFunc/>
+      <NavBar />
+      <RoutesFunc />
     </div>
   );
 }

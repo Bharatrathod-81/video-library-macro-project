@@ -12,33 +12,31 @@ export const Home = () => {
     const dispatch = useDispatch();
     const { videos } = useSelector(state => state.videos);
 
-    let filteredVideos = videos;
-    if (category !== "All") {
-        filteredVideos = videos.filter(item => item.categoryName === category)
-    }
+    let categories = videos.reduce((acc, curr) =>
+        acc[acc.length - 1].categoryName === curr.categoryName ? acc : [...acc, curr], [{}]);
 
     useEffect(() => {
         dispatch(getVideos())
     }, [dispatch])
 
     return (
-        <>
+        <div className="home-body flex-grow">
             <CategoryBar Func={setCategory} />
-            <div className="home-body">
+            <div>
                 <div className="image-body">
                     <img className="image" src="./images/video-library.png" alt="home-page image" />
                     <button className="watch-btn padding-small">WATCH NOW</button>
                 </div>
-                <div className="card-container flex-row">
-                    {videos.map(item => {
+                <div className="card-container jstfy-centre flex-wrap">
+                    {categories.slice(1).map(item => {
                         return (
-                            <div className="card-body margin-small">
+                            <div key={item._id} className="card-body  margin-small">
                                 <Card data={item} />
                             </div>
                         )
                     })}
                 </div>
             </div>
-        </>
+        </div>
     )
 }

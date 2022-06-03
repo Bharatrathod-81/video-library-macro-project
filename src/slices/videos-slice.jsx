@@ -24,7 +24,7 @@ export const getVideos = createAsyncThunk(
 export const videosSlice = createSlice({
     name:"videos",
     initialState,
-    reducers:() => {
+    reducers:{
     },
     extraReducers:{
         [getVideos.pending] : (state) => {

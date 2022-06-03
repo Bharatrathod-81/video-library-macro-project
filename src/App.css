@@ -1,4 +1,6 @@
-
+*{
+  box-sizing: border-box;
+}
 :root{
   --primary-color :rgba(3, 124, 217, 0.996);
   --text-color : white;
@@ -28,3 +30,12 @@ a{
   color: black;
   cursor: pointer;
 }
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 0vh;
+}
+
+
+
+

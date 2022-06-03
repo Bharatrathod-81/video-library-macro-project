@@ -1,12 +1,18 @@
-
+.nav-body{
+    height: 8vh;
+    position: relative;
+}
 .nav-items{
     flex-grow: 1;
+
 }
 
 .menu-btn{
     font-size: 22px;
     font-weight: bold;
     width: 1rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
 }
 
 .logo1{
@@ -23,3 +29,4 @@
     color: var(--text-color);
     border-radius: 0.2rem;
 }
+

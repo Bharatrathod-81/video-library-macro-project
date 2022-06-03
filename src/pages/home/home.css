@@ -1,11 +1,13 @@
 .home-body{
     box-sizing: border-box;
-
+    
 }
 
 .image-body{
     position: relative;
+    
 }
+
 
 .image{
     width: 100%;
@@ -25,8 +27,6 @@
 
 .card-container{
     width: 100%;
-    overflow:visible;
-    overflow-x: scroll;
 }
 
 .card-body{

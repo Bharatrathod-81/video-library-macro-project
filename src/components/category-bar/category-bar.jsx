@@ -15,9 +15,9 @@ export const CategoryBar = ({ Func }) => {
     }
 
     return (
-        <>
+        <div>
             <hr />
-            <div className="category-bar-body  jstfy-start">
+            <div className="category-bar-body jstfy-start margin-small ">
                 {categoryArr.map(item => <button
                     key={item}
                     className={category === item ? "categories padding-small selected" : "categories padding-small"}
@@ -25,6 +25,6 @@ export const CategoryBar = ({ Func }) => {
                 >{item}</button>)}
             </div>
             <hr />
-        </>
+        </div>
     )
 };
