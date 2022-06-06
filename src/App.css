@@ -6,6 +6,9 @@
   --text-color : white;
   --bg-color : rgba(191, 186, 186, 0.549) ;
   --card-text-color : rgb(65, 64, 64);
+  --input-color : rgba(218, 216, 216, 0.541);
+  --border-color : rgba(36, 34, 34, 0.185);
+  --wrong-input-color : red;
 }
 
 

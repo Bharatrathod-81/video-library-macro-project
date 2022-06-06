@@ -3,7 +3,7 @@
 .side-bar-body{
     background-color: var(--text-color);
     box-sizing: border-box;
-    height: 100vh;
+    height: 91vh;
     border: 2px solid var(--bg-color);
     margin-top: 0.5rem;
     width: 12rem;
