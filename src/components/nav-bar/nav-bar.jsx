@@ -11,10 +11,10 @@ export const NavBar = () => {
 
     const dispatch = useDispatch();
     const { auth, status} = useSelector(state => state.auth);
-    const [isLogin, setIslogin] = useState(true)
+    const [isLogin, setIslogin] = useState(false)
 
     
-    // this function is for logout
+    
     const Logout = () => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
