@@ -1,0 +1,101 @@
+.main-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.signup-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 95%;
+}
+
+.signup-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--border-color);
+    background-color:var(--text-color);
+    width: 20rem;
+}
+
+
+.signup-heading{
+    text-align: center;
+    margin: 1rem;
+}
+
+.name-input-container{
+    width: 90%;
+}
+
+.name-input{
+    border: 2px solid var(--border-color);
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 1.5rem;
+    background-color: var(--input-color);
+}
+
+.email-input-container{
+    width: 90%;
+}
+
+.email-input{
+    border: 2px solid var(--border-color);
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 1.5rem;
+    background-color: var(--input-color);
+}
+
+.Password-input{
+    border: 2px solid var(--border-color);
+    width: 100%;
+    height: 4vh;
+    margin-bottom: 1rem;
+    background-color: var(--input-color);
+}
+
+.password-container{
+    position: relative;
+    height: 4vh;
+    margin-bottom: 1rem;
+}
+
+.show-password-Btn{
+    position: absolute;
+    background-color: var(--text-color);
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+.forgot-password{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.signup-Btn{
+    background-color: var(--bg-color);
+    width: 100%;
+    padding: 0.7rem;
+    margin: 1rem 0;
+}
+
+.new-account{
+    margin: 1rem;
+}
+
+.signup-Btn:hover,
+.show-password-Btn:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
