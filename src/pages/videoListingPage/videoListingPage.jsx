@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import { useSelector } from "react-redux";
 import { CategoryBar } from "../../components/category-bar/category-bar";
 import { Card } from "../../components/card/card";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+
 
 export const VideoListingPage = () => {
 
@@ -23,7 +24,9 @@ export const VideoListingPage = () => {
                 {filterArr.map(item => {
                     return (
                         <div className="card-body">
-                            <Card data={item} />
+                            <Link to={`/singleVideo/${item._id}`}>
+                                <Card data={item} />
+                            </Link>
                         </div>
                     )
                 })}

@@ -1,0 +1,70 @@
+.video-page-body{
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+
+.video-frame{
+    margin-top: 0.5rem;
+    width: 70%;
+    height: 80vh;
+}
+
+.video-player{
+    position: relative;
+    height: 100vh;
+}
+
+.feature-container{
+    height: 20vh;
+    position: absolute;
+    bottom: 15%;
+    left: 1%;
+}
+
+.watch-later,
+.playlist,
+.like{
+    background-color: var(--feature-bg-color);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    margin-left: 0.3rem;
+    padding: 0.5rem 0rem;
+
+
+}
+
+.watch-later-btn,
+.playlist-btn,
+.like-btn{
+    font-size: 18px;
+}
+
+.feature-texts{
+    font-size: 13px;
+}
+
+
+.video-discription{
+    text-align: start;
+}
+
+.creator{
+    display: inline;
+}
+
+
+.card-Body{
+    border: 2px solid var(--border-color);
+}
+
+.sidevideo-image{
+    width: 13rem;
+    height: 8rem;
+}
+
+.video-texts{
+    width: 15rem;
+    height: 8rem;
+}
