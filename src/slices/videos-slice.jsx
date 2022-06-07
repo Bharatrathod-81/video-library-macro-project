@@ -10,7 +10,7 @@ export const getVideos = createAsyncThunk(
     "videos/getVideos",
     async () => {
         try{
-            const res = await axios.get("api/videos")
+            const res = await axios.get("/api/videos")
             const data = res.data.videos;
             return data
         } catch {

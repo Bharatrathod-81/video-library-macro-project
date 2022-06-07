@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { SignupValidChecker } from "../../utils/MailPasswordChecker";
 import { useDispatch } from "react-redux";
-import { getSignUp } from "../../slices/authSlice";
+import { postSignup } from "../../slices/authSlice";
 
 
 export const SignUp = () => {
@@ -21,7 +21,7 @@ export const SignUp = () => {
 
     useEffect(() => {
         if (!error.isError) {
-            signupDispatch(getSignUp(userDetail));
+            signupDispatch(postSignup(userDetail));
         }
     }, [error]);
 
@@ -41,7 +41,9 @@ export const SignUp = () => {
                 className="signup-body"
                 onSubmit={(e) => e.preventDefault()}
             >
+
                 <div className="signup-container">
+
                     <div className="signup-heading">
                         <h2>Signup</h2>
                     </div>
@@ -104,6 +106,7 @@ export const SignUp = () => {
 
 
                     </div>
+                    
                     <div className="email-input-container">
                         <label for="Password-input">Confirm Password</label>
                         <div className="password-container">
@@ -123,21 +126,25 @@ export const SignUp = () => {
                         {error.confirmpassword && <div className="wrong-input">{error.confirmpassword}</div>}
 
                     </div>
+
                     <div className="forgot-password">
                         <div>
                             <input className="rememberMe-input" type="checkbox" />
                             <label for="rememberMe-input">I accept all Terms & Conditions</label>
                         </div>
                     </div>
+
                     <div className="email-input-container">
                         <button
                             onClick={submitFunc}
                             className="signup-Btn"
                         >Create New Account</button>
                     </div>
+
                     <Link to="/login" className="new-account">
                         Already have an account
                     </Link>
+
                 </div>
             </form>
         </div>

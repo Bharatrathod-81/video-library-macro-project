@@ -154,4 +154,14 @@ export const videos = [
     views: 6,
     time:4
   },
+  {
+    _id: "x3wdzPYYQ1o",
+    title: "Life as we know it Movie Explained in Hindi",
+    description:
+      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    creator: "Movies At Glance",
+    categoryName: "Comedy Movie",
+    views: 6,
+    time:4
+  },
 ];

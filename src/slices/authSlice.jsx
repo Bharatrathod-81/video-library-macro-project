@@ -2,83 +2,124 @@ import axios from "axios";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
-const initialState = {
-    auth : {
-        token : localStorage.getItem("token") || "",
-        user : localStorage.getItem("user") || "",
-    },
-    status: "idle",
-};
+
 
 // for the login
-export const getLogin = createAsyncThunk(
-    "loginSingup/getLogin",
-    async ( {email, password} ) => {
-        const res = await axios.post("/api/auth/login", { email,password })
-        return res ;  
+export const postLogin = createAsyncThunk(
+
+    "loginSingup/postLogin",
+    async ({ email, password }) => {
+        try {
+            const { data, status } = await axios.post("/api/auth/login", { email, password });
+
+            localStorage.setItem("token", data.encodedToken);
+            localStorage.setItem("user", data.foundUser.firstName);
+
+            if (status === 200) {
+                toast.success(`Welcome Back ${data.foundUser.firstName}`)
+            }
+            return data;
+        } catch (err) {
+
+        }
     }
 );
+
+
+
 // for the signup
-export const getSignUp = createAsyncThunk(
-    "loginSingup/getSignUp",
-    async ({firstname, lastname, email, password}) => {
-        const res = await axios.post(`/api/auth/signup`,{
-            firstName : firstname,
-            lastName : lastname,
-            email : email,
-            password : password
-        })
-        return res 
+export const postSignup = createAsyncThunk(
+
+    "loginSingup/postSignup",
+    async ({ firstname, lastname, email, password }) => {
+        
+        try {
+            const { data, status } = await axios.post(`/api/auth/signup`, {
+                firstName: firstname,
+                lastName: lastname,
+                email: email,
+                password: password
+            });
+            if (status === 201) {
+                toast.success(`Welcome ${data.createdUser.firstName}`)
+            };
+    
+            return data;
+
+        } catch (err) {
+
+        }
     }
-)
+);
+
+
 
 export const authSlice = createSlice({
-    name:"loginSingup",
-    initialState,
-    reducers:{},
-    extraReducers:{
+
+    name: "loginSingup",
+
+    initialState: {
+        token: localStorage.getItem("token") || null,
+        user: localStorage.getItem("user") || null,
+        status: "idle",
+        isLogin: false,
+        isSignup: false,
+    },
+
+
+    reducers: {
+
+        logOutHandler: (state) => {
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            state.user = null;
+            state.token = null;
+            toast.info("Successfully Logout")
+        }
+    },
+
+
+    extraReducers: {
+
         // for the login
-        [getLogin.pending] : (state) => {
+        [postLogin.pending]: (state) => {
             state.status = "pending";
         },
 
-        [getLogin.fulfilled] : (state,{ payload }) => {
+        [postLogin.fulfilled]: (state, { payload }) => {
             state.status = "fulfilled";
-            
-            localStorage.setItem("token",payload.data.encodedToken);
-            localStorage.setItem("user",payload.data.foundUser.firstName);
+            state.isLogin = true;
 
-            if (payload.status === 200) {
-                toast.success(`Welcome Back ${payload.data.foundUser.firstName}`)
-            }
+            state.token = payload.encodedToken;
+            state.user = payload.foundUser.firstName;
+
         },
-        [getLogin.rejected] : (state) => {
+        [postLogin.rejected]: (state) => {
             state.status = "rejected";
             toast.error("Invalid Username or Password");
         },
-        
+
+
+
         // for the signup
-        [getSignUp.pending] : (state) => {
+        [postSignup.pending]: (state) => {
             state.status = "pending";
         },
 
-        [getSignUp.fulfilled] : (state, { payload }) => {
-
-            if (payload.status === 201) {
-                toast.success(`Welcome ${payload.data.createdUser.firstName}`)
-            }
+        [postSignup.fulfilled]: (state, { payload }) => {
             state.status = "fulfilled";
-
-            localStorage.setItem("token",payload.data.encodedToken);
-            localStorage.setItem("user",payload.data.createdUser.firstName);
+            state.token = payload.encodedToken;
+            state.user = payload.createdUser.firstName;
 
         },
 
-        [getSignUp.rejected] : (state) => {
+        [postSignup.rejected]: (state) => {
             state.status = "rejected";
             toast.error("Invalid Email or Password");
         }
     }
 })
+
+export const { logOutHandler } = authSlice.actions;
 
 export const authReducer = authSlice.reducer;
