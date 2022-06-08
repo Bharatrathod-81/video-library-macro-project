@@ -23,7 +23,9 @@ export const VideoListingPage = () => {
             <div className="card-container jstfy-spce-around flex-wrap">
                 {filterArr.map(item => {
                     return (
-                        <div className="card-body">
+                        <div
+                            key={item._id}
+                            className="card-body">
                             <Link to={`/singleVideo/${item._id}`}>
                                 <Card data={item} />
                             </Link>
