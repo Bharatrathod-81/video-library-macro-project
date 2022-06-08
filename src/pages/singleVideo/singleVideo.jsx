@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideos } from "../../slices/videos-slice";
 import { Link, useParams } from "react-router-dom";
+import { postWatchLater } from "../../slices/userSlice";
 import ReactPlayer from "react-player";
 
 
@@ -23,6 +24,7 @@ export const SingleVideo = () => {
         findVideo = videos.find(item => item._id === videoId);
     }
 
+
     return (
         <div className="video-page-body margin-small">
             {loading ?
@@ -40,7 +42,9 @@ export const SingleVideo = () => {
                             />
 
                             <div className="feature-container jstfy-spce-btwn flex-column">
-                                <div className="watch-later flex-column align-centre jstfy-centre">
+                                <div
+                                    onClick={() => dispatch(postWatchLater(findVideo))}
+                                    className="watch-later flex-column align-centre jstfy-centre">
                                     <div className="watch-later-btn"><i class="fa fa-clock-o"></i></div>
                                     <div className="feature-texts">Watch Later</div>
                                 </div>
@@ -49,7 +53,7 @@ export const SingleVideo = () => {
                                     <div className="playlist-btn"><i class="fa fa-plus"></i></div>
                                     <div className="feature-texts">PlayList</div>
                                 </div>
-                                
+
                                 <div className="like flex-column align-centre jstfy-centre">
                                     <div className="like-btn"><i class="fa fa-thumbs-up"></i></div>
                                     <div className="feature-texts">Like</div>
@@ -69,7 +73,9 @@ export const SingleVideo = () => {
                         {videos.map(item => {
                             if (item.categoryName === findVideo.categoryName) {
                                 return (
-                                    <Link to={`/singleVideo/${item._id}`}>
+                                    <Link
+                                        key={item._id}
+                                        to={`/singleVideo/${item._id}`}>
                                         <div className="card-Body jstfy-centre margin-small">
                                             <img className='sidevideo-image' src={`https://img.youtube.com/vi/${item._id}/mqdefault.jpg`} alt="video_thumbnail"></img>
                                             <div className="video-texts jstfy-centre flex-column">

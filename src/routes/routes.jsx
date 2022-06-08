@@ -5,7 +5,9 @@ import { Login } from "../pages/login/login";
 import { SignUp } from "../pages/signup/signup";
 import { SingleVideo } from "../pages/singleVideo/singleVideo";
 import { VideoListingPage } from "../pages/videoListingPage/videoListingPage";
+import { WatchLater } from "../pages/watchLater/watchLater";
 import { RequiredAuth } from "./requiredAuth";
+
 
 
 export const RoutesFunc = () => {
@@ -26,11 +28,18 @@ export const RoutesFunc = () => {
                             <VideoListingPage />
                         </RequiredAuth>
                     } />
-                    
+
                 <Route path="/singleVideo/:videoId"
                     element={
                         <RequiredAuth>
                             <SingleVideo />
+                        </RequiredAuth>
+                    } />
+
+                <Route path="/watchLater"
+                    element={
+                        <RequiredAuth>
+                            <WatchLater />
                         </RequiredAuth>
                     } />
             </Routes>

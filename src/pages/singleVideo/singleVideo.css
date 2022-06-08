@@ -30,8 +30,7 @@
     border-radius: 0.5rem;
     color: var(--text-color);
     padding: 0.4rem;
-
-
+    cursor: pointer;
 }
 
 .watch-later-btn,

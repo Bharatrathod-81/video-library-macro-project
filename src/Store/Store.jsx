@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { authReducer } from "../slices/authSlice";
 import { operatorReducer } from "../slices/operatorSlice";
+import { userReducer } from "../slices/userSlice";
 import { videoReducer } from "../slices/videos-slice";
 
 
@@ -9,5 +10,6 @@ export const store = configureStore({
         videos : videoReducer,
         operators : operatorReducer,
         auth : authReducer,
+        user : userReducer,
     },
 })
