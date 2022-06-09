@@ -1,0 +1,60 @@
+.playlist-body{
+    position: relative;
+    width: 100%;
+}
+
+.create-playlist-btn{
+    font-size: 22px;
+    font-weight: bold;
+    color:var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 0.2rem;
+}
+
+
+.playlist-card{
+    position: relative;
+    border: 2px solid var(--border-color);
+    width: 15rem;
+    border-radius: 0.2rem;
+}
+
+.add-video-btn{
+    font-size: 22px;
+    background-color: var(--primary-color);
+    border-radius: 0.2rem;
+}
+
+.new-playlist-text{
+    width: 80%;
+}
+
+.delete-playlist-btn{
+    position: absolute;
+    right: 3%;
+    bottom: 1%;
+    font-size: 22px;
+    background-color: var(--primary-color);
+    border-radius: 0.2rem;
+}
+
+.playlist-card-body{
+    border: 2px solid var(--border-color);
+    width: 20.2rem;
+    margin: 0.5rem;
+    height: 16.5rem;
+    position: relative;
+}
+
+.remove-from-playlist{
+   position: absolute;
+   bottom: 5%;
+   right: 5%;
+   background-color: var(--primary-color);
+   border-radius: 0.2rem;
+   display: none;
+}
+
+.playlist-card-body:hover .remove-from-playlist{
+    display: inherit;
+}

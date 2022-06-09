@@ -1,0 +1,33 @@
+.all-playlist-card-body{
+    position: absolute;
+    width: 20rem;
+    height: 35vh;
+    z-index: 2;
+    top: 8%;
+    background-color: var(--primary-color);
+    border: 2px solid;
+    border-radius: 0.2rem;
+}
+
+.all-playlist-container{
+    border: 2px solid;
+    height: 12rem;
+    border-radius: 0.2rem;
+    background-color: var(--text-color);
+    overflow: scroll;
+}
+
+.add-video{
+    border-radius: 0.2rem;
+    border: 2px solid;
+    width: 96%;
+    margin: 0.2rem;
+    background-color: var(--border-color);
+}
+
+.create-new-playlist{
+    background-color: var(--text-color);
+    border-radius: 0.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}

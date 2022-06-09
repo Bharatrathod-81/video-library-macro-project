@@ -1,0 +1,23 @@
+.add-playlist-card{
+    z-index: 2;
+    position: absolute;
+    border: 2px solid ;
+    width: 20rem;
+    background-color: var(--text-color);
+    border-radius: 0.2rem
+}
+
+.title-input,
+.description-input{
+    display: block;
+    width: 95%;
+    margin-bottom: 1rem;
+}
+
+.add-playlist-btn{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 0.2rem;
+}

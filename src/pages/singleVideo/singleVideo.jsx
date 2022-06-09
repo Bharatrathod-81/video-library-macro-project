@@ -1,16 +1,18 @@
 import "./singleVideo.css"
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideos } from "../../slices/videos-slice";
 import { Link, useParams } from "react-router-dom";
 import { postWatchLater } from "../../slices/userSlice";
 import ReactPlayer from "react-player";
+import { AllPlaylist } from "../../components/allPlaylistCard/allPlaylistCard";
 
 
 export const SingleVideo = () => {
 
     const { videoId } = useParams();
     const dispatch = useDispatch();
+    const [showPlaylist, setShowPlaylist] = useState(false);
 
     useEffect(() => {
         dispatch(getVideos());
@@ -18,7 +20,7 @@ export const SingleVideo = () => {
 
     const { videos, loading } = useSelector(state => state.videos);
 
-    let findVideo = { _id: "", categoryName: "" }
+    let findVideo = {}
 
     if (videos[0] !== undefined) {
         findVideo = videos.find(item => item._id === videoId);
@@ -27,10 +29,11 @@ export const SingleVideo = () => {
 
     return (
         <div className="video-page-body margin-small">
-            {loading ?
+            {loading || videos[0] === undefined ?
                 <h2>Loading...</h2>
                 :
-                <div className="jstfy-centre flex-wrap">
+                
+                <div className="jstfy-centre flex-wrap single-video-body">
                     <div className="video-frame flex-column flex-grow">
                         <div className="video-player">
                             <ReactPlayer
@@ -49,7 +52,9 @@ export const SingleVideo = () => {
                                     <div className="feature-texts">Watch Later</div>
                                 </div>
 
-                                <div className="playlist flex-column align-centre jstfy-centre">
+                                <div
+                                    onClick={() => setShowPlaylist(!showPlaylist)}
+                                    className="playlist flex-column align-centre jstfy-centre">
                                     <div className="playlist-btn"><i class="fa fa-plus"></i></div>
                                     <div className="feature-texts">PlayList</div>
                                 </div>
@@ -60,6 +65,8 @@ export const SingleVideo = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {showPlaylist && <AllPlaylist func={setShowPlaylist} video={findVideo}/>}
 
                         <div className="video-discription margin-small">
                             <h3>{findVideo.title}</h3>
