@@ -66,25 +66,6 @@ export const postVideo = createAsyncThunk(
 
 
 
-export const getPlaylistVideos = createAsyncThunk(
-
-    "playlist/getPlaylistVideos",
-    async ({videoId}) => {
-        try {
-            const { data } = await axios.get(`/api/user/playlists/${videoId}`,
-                {
-                    headers: { authorization: localStorage.getItem("token") }
-                }
-            );
-            return data;
-        } catch (err) {
-            toast.error("Faild to get Videos")
-        }
-    }
-);
-
-
-
 export const getPlaylists = createAsyncThunk(
     "playlist/getPlaylists",
     async () => {
@@ -172,17 +153,6 @@ export const playlistSlice = createSlice({
         [getPlaylists.rejected]: (state) => {
         },
 
-
-        // for getting the playlist
-        [getPlaylistVideos.pending]: (state) => {
-        },
-
-        [getPlaylistVideos.fulfilled]: (state, { payload }) => {
-            state.playlist = payload.playlist;
-        },
-
-        [getPlaylistVideos.rejected]: (state) => {
-        }
     }
 })
 
