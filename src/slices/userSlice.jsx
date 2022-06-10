@@ -153,6 +153,70 @@ export const removeAllHistoryVideo = createAsyncThunk(
 );
 
 
+// for to add videos to likes
+export const postLikes = createAsyncThunk(
+
+    "/userSlice/postLikes",
+
+    async (video) => {
+        try{
+            const { data } = await axios.post(
+                "/api/user/likes",
+                {video: video},
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            toast.success("Successfully Added To Likes")
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
+
+// for to get videos to likes
+export const getLikes = createAsyncThunk(
+
+    "/userSlice/getLikes",
+
+    async () => {
+        try{
+            const { data } = await axios.get(
+                "/api/user/likes",
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
+// for to remove videos from likes
+export const removeLikes = createAsyncThunk(
+
+    "/userSlice/removeLikes",
+
+    async (video) => {
+        try{
+            const { data } = await axios.delete(
+                `/api/user/likes/${video._id}`,
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
+
 export const userSlice = createSlice({
     name : "userSlice",
     initialState: {
@@ -160,6 +224,7 @@ export const userSlice = createSlice({
         status: "idle",
         WatchLater: [],
         history: [],
+        likes: [],
     },
 
     reducers: {
@@ -241,6 +306,18 @@ export const userSlice = createSlice({
         },
 
         [removeAllHistoryVideo.rejected]: (state) => {
+        },
+
+
+        // / for add videos to likes
+        [getLikes.pending]: (state) => {
+        },
+
+        [getLikes.fulfilled]: (state,{ payload }) => {
+            state.likes = payload.likes ;
+        },
+
+        [getLikes.rejected]: (state) => {
         },
     }
 })

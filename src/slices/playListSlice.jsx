@@ -109,7 +109,6 @@ export const playlistSlice = createSlice({
     name: "playlist",
     initialState: {
         playlists: [],
-        playlist: {videos:[]},
 
     },
 
