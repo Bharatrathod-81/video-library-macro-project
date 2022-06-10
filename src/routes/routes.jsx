@@ -4,6 +4,7 @@ import { History } from "../pages/History-page/History-page";
 import { Home } from "../pages/home/home";
 import { Like } from "../pages/like-page/like-page";
 import { Login } from "../pages/login/login";
+import { Pagenotfound } from "../pages/pageNotFound/pageNotFound";
 import { PlayList } from "../pages/playList/playList";
 import { PlaylistVideoListingPage } from "../pages/playList/playlistVideoListing";
 import { SignUp } from "../pages/signup/signup";
@@ -11,6 +12,7 @@ import { SingleVideo } from "../pages/singleVideo/singleVideo";
 import { VideoListingPage } from "../pages/videoListingPage/videoListingPage";
 import { WatchLater } from "../pages/watchLater/watchLater";
 import { RequiredAuth } from "./requiredAuth";
+
 
 
 
@@ -26,6 +28,7 @@ export const RoutesFunc = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
+                <Route path="*" element={<Pagenotfound />} />
 
                 <Route path="/playPage/:videoId"
                     element={
