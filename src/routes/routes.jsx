@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { SideBar } from "../components/side-bar/side-bar";
+import { History } from "../pages/History-page/History-page";
 import { Home } from "../pages/home/home";
 import { Login } from "../pages/login/login";
 import { PlayList } from "../pages/playList/playList";
@@ -57,6 +58,13 @@ export const RoutesFunc = () => {
                     element={
                         <RequiredAuth>
                             <PlayList />
+                        </RequiredAuth>
+                    } />
+
+                <Route path="/history"
+                    element={
+                        <RequiredAuth>
+                            <History />
                         </RequiredAuth>
                     } />
             </Routes>

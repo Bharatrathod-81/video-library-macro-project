@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideos } from "../../slices/videos-slice";
 import { Link, useParams } from "react-router-dom";
-import { postWatchLater } from "../../slices/userSlice";
+import { postHistory, postWatchLater } from "../../slices/userSlice";
 import ReactPlayer from "react-player";
 import { AllPlaylist } from "../../components/allPlaylistCard/allPlaylistCard";
 
@@ -41,7 +41,7 @@ export const SingleVideo = () => {
                                 url={`https://www.youtube.com/watch?v=${findVideo._id}`}
                                 width="100%"
                                 height="100%"
-                                onPlay={() => { }}
+                                onPlay={() => dispatch(postHistory(findVideo))}
                             />
 
                             <div className="feature-container jstfy-spce-btwn flex-column">

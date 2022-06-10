@@ -25,7 +25,7 @@ export const PlaylistVideoListingPage = () => {
             {playlist === undefined ?
                 <h4>There Is No Videos Here</h4>
                 :
-                <div className="card-container jstfy-spce-around flex-wrap">
+                <div className="card-container jstfy-centre flex-wrap">
                     {playlist.videos.map(item => {
                         return (
                             <div

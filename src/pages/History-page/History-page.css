@@ -1,0 +1,31 @@
+.history-body{
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.remove-all-history{
+    background-color: var(--primary-color);
+    border-radius: 0.2rem;
+}
+
+
+.history-card-body{
+    border: 2px solid var(--border-color);
+    width: 20.2rem;
+    margin: 0.5rem;
+    height: 16.5rem;
+    position: relative;
+}
+
+.history-remove-btn{
+   position: absolute;
+   bottom: 5%;
+   right: 5%;
+   background-color: var(--primary-color);
+   border-radius: 0.2rem;
+   display: none;
+}
+
+.history-card-body:hover .history-remove-btn{
+    display: inherit;
+}
