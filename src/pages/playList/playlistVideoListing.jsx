@@ -10,11 +10,14 @@ export const PlaylistVideoListingPage = () => {
     const { videoId } = useParams();
     const dispatch = useDispatch();
     const [dependency,setdependency] = useState(false)
-    const { playlist } = useSelector(state => state.playlist);
-
+    
     useEffect(() => {
-        dispatch(getPlaylistVideos(videoId));
+        dispatch(getPlaylists());
     },[dependency])
+    
+    const { playlists } = useSelector(state => state.playlist);
+
+    const playlist = playlists.find(item => item._id === videoId)
 
 
     return (
