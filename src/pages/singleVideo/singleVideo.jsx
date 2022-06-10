@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getVideos } from "../../slices/videos-slice";
 import { Link, useParams } from "react-router-dom";
-import { postHistory, postWatchLater } from "../../slices/userSlice";
+import { postHistory, postLikes, postWatchLater } from "../../slices/userSlice";
 import ReactPlayer from "react-player";
 import { AllPlaylist } from "../../components/allPlaylistCard/allPlaylistCard";
 
@@ -59,7 +59,9 @@ export const SingleVideo = () => {
                                     <div className="feature-texts">PlayList</div>
                                 </div>
 
-                                <div className="like flex-column align-centre jstfy-centre">
+                                <div 
+                                onClick={() => dispatch(postLikes(findVideo))}
+                                className="like flex-column align-centre jstfy-centre">
                                     <div className="like-btn"><i class="fa fa-thumbs-up"></i></div>
                                     <div className="feature-texts">Like</div>
                                 </div>

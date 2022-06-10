@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { SideBar } from "../components/side-bar/side-bar";
 import { History } from "../pages/History-page/History-page";
 import { Home } from "../pages/home/home";
+import { Like } from "../pages/like-page/like-page";
 import { Login } from "../pages/login/login";
 import { PlayList } from "../pages/playList/playList";
 import { PlaylistVideoListingPage } from "../pages/playList/playlistVideoListing";
@@ -65,6 +66,13 @@ export const RoutesFunc = () => {
                     element={
                         <RequiredAuth>
                             <History />
+                        </RequiredAuth>
+                    } />
+
+                <Route path="/likes"
+                    element={
+                        <RequiredAuth>
+                            <Like />
                         </RequiredAuth>
                     } />
             </Routes>

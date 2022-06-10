@@ -11,6 +11,7 @@
    bottom: 5%;
    right: 5%;
    background-color: var(--primary-color);
+   color: var(--primary-color);
    border-radius: 0.2rem;
    display: none;
 }

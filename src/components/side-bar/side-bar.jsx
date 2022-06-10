@@ -13,7 +13,7 @@ export const SideBar = () => {
                 <h4 className="sideBar-item"><Link to="/"><i className="fa fa-home"></i> HOME</Link></h4>
                 <h4 className="sideBar-item"><Link to="/playPage/All"><i className="fa fa-tv"></i> EXPLORE</Link></h4>
                 <h4 className="sideBar-item"><Link to="/playlist"><i className="fa fa-toggle-right"></i> PLAYLIST</Link></h4>
-                <h4 className="sideBar-item"><i className="fa fa-thumbs-up"></i> LIKE</h4>
+                <h4 className="sideBar-item"><Link to="likes"><i className="fa fa-thumbs-up"></i> LIKE</Link></h4>
                 <h4 className="sideBar-item"><Link to="/watchLater"><i className="fa fa-inbox"></i> WATCH LATER</Link></h4>
                 <h4 className="sideBar-item"><Link to="/history"><i className="fa fa-history"></i> HISTORY</Link></h4>
             </div>
