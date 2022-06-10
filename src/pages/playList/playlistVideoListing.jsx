@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from "react-redux";
 import { Card } from "../../components/card/card";
 import { Link, useParams } from "react-router-dom";
-import { getPlaylistVideos, removePlaylistVideo } from "../../slices/playListSlice";
+import { getPlaylists, removePlaylistVideo } from "../../slices/playListSlice";
 
 
 export const PlaylistVideoListingPage = () => {
