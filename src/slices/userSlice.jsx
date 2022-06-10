@@ -64,6 +64,94 @@ export const  deleteWatchLater = createAsyncThunk(
     }
 );
 
+// for to add videos to history
+export const postHistory = createAsyncThunk(
+
+    "/userSlice/postHistory",
+
+    async (video) => {
+        try{
+            const { data } = await axios.post(
+                "/api/user/history",
+                {video: video},
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
+
+// for to getting videos from history
+export const getHistory = createAsyncThunk(
+
+    "/userSlice/getHistory",
+
+    async () => {
+        try{
+            const { data } = await axios.get(
+                "/api/user/history",
+            
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
+
+// for to remove videos from history
+export const removeHistoryVideo = createAsyncThunk(
+
+    "/userSlice/removeHistoryVideo",
+
+    async (videoId) => {
+        try{
+            const { data } = await axios.delete(
+                `/api/user/history/${videoId}`,
+            
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            toast.info("Successfully Removed From History");
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
+// for to remove all videos from history
+export const removeAllHistoryVideo = createAsyncThunk(
+
+    "/userSlice/removeAllHistoryVideo",
+
+    async () => {
+        try{
+            const { data } = await axios.delete(
+                "/api/user/history/all",
+            
+                {
+                    headers: { authorization: localStorage.getItem("token") },
+                }
+            )
+            toast.info("Successfully Removed From History");
+            return data ;
+        } catch (err) {
+            console.log(err);
+        }
+    }
+);
+
 
 export const userSlice = createSlice({
     name : "userSlice",
@@ -71,6 +159,7 @@ export const userSlice = createSlice({
         loading : false,
         status: "idle",
         WatchLater: [],
+        history: [],
     },
 
     reducers: {
@@ -111,6 +200,47 @@ export const userSlice = createSlice({
         [deleteWatchLater.rejected]: (state) => {
             state.loading = false ;
             state.status = "rejected" ;
+        },
+
+
+        // / for get videos from hisyory
+        [getHistory.pending]: (state) => {
+            state.loading = true;
+            state.status = "pending"
+        },
+
+        [getHistory.fulfilled]: (state,{ payload }) => {
+            state.loading = false ; 
+            state.status = "fulfilled";
+            state.history = payload.history ;
+        },
+
+        [getHistory.rejected]: (state) => {
+            state.loading = false ;
+            state.status = "rejected" ;
+        },
+
+
+        // / for remove videos from hisyory
+        [removeHistoryVideo.pending]: (state) => {
+        },
+
+        [removeHistoryVideo.fulfilled]: (state,{ payload }) => {
+            state.history = payload.history ;
+        },
+
+        [removeHistoryVideo.rejected]: (state) => {
+        },
+
+        // / for remove all videos from hisyory
+        [removeAllHistoryVideo.pending]: (state) => {
+        },
+
+        [removeAllHistoryVideo.fulfilled]: (state,{ payload }) => {
+            state.history = payload.history ;
+        },
+
+        [removeAllHistoryVideo.rejected]: (state) => {
         },
     }
 })
