@@ -4,9 +4,12 @@
     margin-top: 0.5rem;
 }
 
+.single-video-body{
+    position: relative;
+}
+
 
 .video-frame{
-    margin-top: 0.5rem;
     width: 70%;
     height: 80vh;
 }

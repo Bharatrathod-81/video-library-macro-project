@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
+// this is for to get the watch later items
 export const getWatchLater = createAsyncThunk(
 
     "userSlice/getWatchLater",
@@ -22,7 +22,7 @@ export const getWatchLater = createAsyncThunk(
     }
 );
 
-
+// this is for to post watch later items
 export const postWatchLater = createAsyncThunk(
 
     "userSlice/postWatchLater",
@@ -43,7 +43,7 @@ export const postWatchLater = createAsyncThunk(
     }
 );
 
-
+// this is for to delete the watch later items
 export const  deleteWatchLater = createAsyncThunk(
 
     "userSlice/deleteWatchLater",

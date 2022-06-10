@@ -12,7 +12,7 @@ export const SideBar = () => {
             <div className="align-start flex-column">
                 <h4 className="sideBar-item"><Link to="/"><i className="fa fa-home"></i> HOME</Link></h4>
                 <h4 className="sideBar-item"><Link to="/playPage/All"><i className="fa fa-tv"></i> EXPLORE</Link></h4>
-                <h4 className="sideBar-item"><i className="fa fa-toggle-right"></i> PLAYLIST</h4>
+                <h4 className="sideBar-item"><Link to="/playlist"><i className="fa fa-toggle-right"></i> PLAYLIST</Link></h4>
                 <h4 className="sideBar-item"><i className="fa fa-thumbs-up"></i> LIKE</h4>
                 <h4 className="sideBar-item"><Link to="/watchLater"><i className="fa fa-inbox"></i> WATCH LATER</Link></h4>
                 <h4 className="sideBar-item"><i className="fa fa-history"></i> HISTORY</h4>
