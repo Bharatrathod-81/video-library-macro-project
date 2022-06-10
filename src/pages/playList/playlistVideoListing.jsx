@@ -9,13 +9,11 @@ export const PlaylistVideoListingPage = () => {
 
     const { videoId } = useParams();
     const dispatch = useDispatch();
-    const [dependency,setdependency] = useState(false)
+    const { playlists } = useSelector(state => state.playlist);
     
     useEffect(() => {
         dispatch(getPlaylists());
-    },[dependency])
-    
-    const { playlists } = useSelector(state => state.playlist);
+    },[playlists])
 
     const playlist = playlists.find(item => item._id === videoId)
 
@@ -36,7 +34,6 @@ export const PlaylistVideoListingPage = () => {
                                 </Link>
                                 <button
                                     onClick={() => {
-                                        setdependency(!dependency)
                                         dispatch(removePlaylistVideo({ playlist, item }))}
                                     }
                                     className='remove-from-playlist padding-small'>
