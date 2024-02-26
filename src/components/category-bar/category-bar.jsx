@@ -2,20 +2,24 @@ import "./category-bar.css";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getVideos } from "../../slices/videos-slice";
-import { Link } from "react-router-dom";
 
 export const CategoryBar = ({ Func }) => {
 
-    const [category, setCategory] = useState("All")
+    const [category, setCategory] = useState("All");
+    const [categoryArr, setCategoryArr] = useState([]);
 
     const dispatch = useDispatch();
 
     const { videos } = useSelector(state => state.videos);
-    const categoryArr = videos.reduce((acc, curr) => acc.includes(curr.categoryName) ? acc : [...acc, curr.categoryName], ["All"]);
-
+    
     useEffect(() => {
         dispatch(getVideos())
     }, [dispatch])
+    
+    useEffect(() => {
+        const array = videos.reduce((acc, curr) => acc.includes(curr.categoryName) ? acc : [...acc, curr.categoryName], ["All"]);
+        setCategoryArr(array);
+    }, [videos])
 
     const selectCategory = (value) => {
         setCategory(value)
@@ -25,16 +29,14 @@ export const CategoryBar = ({ Func }) => {
     return (
         <div>
             <hr />
-            <div className="category-bar-body jstfy-start margin-small">
+            <div className="category-bar-body jstfy-start margin-small ">
                 {categoryArr.map(item => 
-                    <Link to={`/playPage/${item}`}>
-                        <button
+                        <div
                             key={item}
-                            className={category === item ? "categories padding-small selected" : "categories padding-small"}
+                            className={category === item ? "categories  selected" : "categories "}
                             onClick={() => selectCategory(item)}
                         >{item}
-                        </button>
-                    </Link>
+                        </div>
                 )}
             </div>
             <hr />

@@ -25,17 +25,12 @@ export const RoutesFunc = () => {
                 <SideBar />
             </div>
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<VideoListingPage />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="*" element={<Pagenotfound />} />
 
-                <Route path="/playPage/:videoId"
-                    element={
-                        <RequiredAuth>
-                            <VideoListingPage />
-                        </RequiredAuth>
-                    } />
+                {/* <Route path="/playPage/:videoId" element={<VideoListingPage />} /> */}
 
                 <Route path="/singleVideo/:videoId"
                     element={

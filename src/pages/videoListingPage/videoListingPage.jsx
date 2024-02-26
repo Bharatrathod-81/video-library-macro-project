@@ -11,7 +11,8 @@ export const VideoListingPage = () => {
 
     const { videoId } = useParams();
     const dispatch = useDispatch();
-    const [category, setCategory] = useState(videoId);
+    const [category, setCategory] = useState('All');
+    const [allVideosList, setAllVideoList] = useState([]);
     const { videos } = useSelector(state => state.videos);
     const { playlists } = useSelector(state => state.playlist);
 
@@ -19,18 +20,22 @@ export const VideoListingPage = () => {
         dispatch(getPlaylists());
     },[dispatch])
 
-    let filterArr = videos;
-    
-    if (category !== "All") {
-        filterArr = videos.filter(item => item.categoryName === category)
-    }
-    
+    useEffect(() => {
+        setAllVideoList(videos);
 
+        if (category !== "All") {
+            const filterArr = videos.filter(item => item.categoryName === category);
+
+            setAllVideoList(filterArr);
+        }
+    },[category, videos])
+
+    
     return (
         <div className="video-listing-body">
             <CategoryBar Func={setCategory} />
-            <div className="card-container jstfy-spce-around flex-wrap">
-                {filterArr.map(item => {
+            <div className="card-container">
+                {allVideosList.map(item => {
                     return (
                         <div
                             key={item._id}

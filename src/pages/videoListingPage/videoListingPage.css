@@ -5,7 +5,12 @@
 
 .card-body{
     position: relative;
-    width: 20.2rem;
     margin: 0.5rem;
-    height: 16.5rem;
+
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
 }
