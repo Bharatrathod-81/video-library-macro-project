@@ -29,15 +29,8 @@ export const RoutesFunc = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="*" element={<Pagenotfound />} />
-
-                {/* <Route path="/playPage/:videoId" element={<VideoListingPage />} /> */}
-
-                <Route path="/singleVideo/:videoId"
-                    element={
-                        <RequiredAuth>
-                            <SingleVideo />
-                        </RequiredAuth>
-                    } />
+                
+                <Route path="/singleVideo/:videoId" element={<SingleVideo />} />
 
                 <Route path="/watchLater"
                     element={

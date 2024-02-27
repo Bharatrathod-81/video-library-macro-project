@@ -11,12 +11,15 @@
 
 .video-frame{
     width: 70%;
-    height: 80vh;
+    height: 100vh;
 }
 
 .video-player{
     position: relative;
-    height: 100vh;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+
 }
 
 .feature-container{
