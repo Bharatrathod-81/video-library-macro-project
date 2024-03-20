@@ -1,5 +1,7 @@
 .main-body{
-    margin-bottom: 4rem;
+    height: 10vh;
+    display: flex;
+    align-items: center;
 }
 
 .nav-body{
@@ -8,6 +10,7 @@
     width: 100%;
     background-color: white;
     z-index: 10;
+    border-bottom: 1px solid rgb(178, 176, 176);
 }
 
 .nav-items{

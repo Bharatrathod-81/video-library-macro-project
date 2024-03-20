@@ -3,8 +3,8 @@
 .side-bar-body{
     background-color: var(--text-color);
     box-sizing: border-box;
-    height: 91vh;
-    border: 2px solid var(--bg-color);
+    height: 100vh;
+    border-top: 0px;
     margin-top: 0.5rem;
     width: 12rem;
     
@@ -12,6 +12,12 @@
 
 .remove-sideBar{  
     display: none;
+}
+
+.innerBody{
+    position: fixed;
+    top: 13%;
+    
 }
 
 

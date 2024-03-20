@@ -12,6 +12,7 @@ import { SingleVideo } from "../pages/singleVideo/singleVideo";
 import { VideoListingPage } from "../pages/videoListingPage/videoListingPage";
 import { WatchLater } from "../pages/watchLater/watchLater";
 import { RequiredAuth } from "./requiredAuth";
+import './routes.css'
 
 
 
@@ -20,53 +21,56 @@ import { RequiredAuth } from "./requiredAuth";
 export const RoutesFunc = () => {
 
     return (
-        <div className=" flex-row">
-            <div>
+        <div className=" flex-row mainContainer">
+            <div className="SideBarContainer">
                 <SideBar />
             </div>
-            <Routes>
-                <Route path="/" element={<VideoListingPage />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="*" element={<Pagenotfound />} />
-                
-                <Route path="/singleVideo/:videoId" element={<SingleVideo />} />
 
-                <Route path="/watchLater"
-                    element={
-                        <RequiredAuth>
-                            <WatchLater />
-                        </RequiredAuth>
-                    } />
+            <div className="RouteContainer">
+                <Routes>
+                    <Route path="/" element={<VideoListingPage />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<SignUp />} />
+                    <Route path="*" element={<Pagenotfound />} />
+                    
+                    <Route path="/singleVideo/:videoId" element={<SingleVideo />} />
 
-                <Route path="/playlisting/:videoId"
-                    element={
-                        <RequiredAuth>
-                            <PlaylistVideoListingPage />
-                        </RequiredAuth>
-                    } />
+                    <Route path="/watchLater"
+                        element={
+                            <RequiredAuth>
+                                <WatchLater />
+                            </RequiredAuth>
+                        } />
 
-                <Route path="/playlist"
-                    element={
-                        <RequiredAuth>
-                            <PlayList />
-                        </RequiredAuth>
-                    } />
+                    <Route path="/playlisting/:videoId"
+                        element={
+                            <RequiredAuth>
+                                <PlaylistVideoListingPage />
+                            </RequiredAuth>
+                        } />
 
-                <Route path="/history"
-                    element={
-                        <RequiredAuth>
-                            <History />
-                        </RequiredAuth>
-                    } />
+                    <Route path="/playlist"
+                        element={
+                            <RequiredAuth>
+                                <PlayList />
+                            </RequiredAuth>
+                        } />
 
-                <Route path="/likes"
-                    element={
-                        <RequiredAuth>
-                            <Like />
-                        </RequiredAuth>
-                    } />
-            </Routes>
+                    <Route path="/history"
+                        element={
+                            <RequiredAuth>
+                                <History />
+                            </RequiredAuth>
+                        } />
+
+                    <Route path="/likes"
+                        element={
+                            <RequiredAuth>
+                                <Like />
+                            </RequiredAuth>
+                        } />
+                </Routes>
+            </div>
         </div>
     )
 };

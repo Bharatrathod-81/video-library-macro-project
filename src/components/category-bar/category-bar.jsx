@@ -28,7 +28,6 @@ export const CategoryBar = ({ Func }) => {
 
     return (
         <div>
-            <hr />
             <div className="category-bar-body jstfy-start margin-small ">
                 {categoryArr.map(item => 
                         <div

@@ -1,0 +1,14 @@
+
+.mainContainer{
+    position: relative;
+}
+
+.SideBarContainer{
+    width: fit-content; 
+    border-right: 1px solid rgb(178, 176, 176);
+}
+
+.RouteContainer{
+    display: flex;
+    flex: 1;
+}
