@@ -31,3 +31,9 @@
 .sideBar-item{
     margin-left: 2rem;
 }
+
+.active{
+    margin-left: 2rem;
+    font-weight: 900;
+    text-decoration: underline;
+}

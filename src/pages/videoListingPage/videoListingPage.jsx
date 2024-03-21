@@ -11,6 +11,7 @@ export const VideoListingPage = () => {
     const { videoId } = useParams();
     const [category, setCategory] = useState('All');
     const [allVideosList, setAllVideoList] = useState([]);
+    const [hoverCard, setHoverCard] = useState('');
     const { videos } = useSelector(state => state.videos);
 
     
@@ -36,7 +37,7 @@ export const VideoListingPage = () => {
                             key={item._id}
                             className="card-body">
                             <Link to={`/singleVideo/${item._id}`}>
-                                <Card data={item} />
+                                <Card data={item} hoverCard={hoverCard} setHoverCard={setHoverCard}/>
                             </Link>
                         </div>
                     )

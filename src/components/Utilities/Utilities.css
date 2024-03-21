@@ -126,3 +126,7 @@
     margin: 5rem;
 }
 
+.border-shadow{
+    box-shadow: 5px 10px 7px #888888;
+}
+
