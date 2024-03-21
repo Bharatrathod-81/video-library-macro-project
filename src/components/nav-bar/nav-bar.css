@@ -29,12 +29,16 @@
 .logo1{
     background-color: var(--primary-color);
     color: var(--text-color);
-    font-size: 29px;
+    font-size: 25px;
     border-radius: 0.2rem;
     display: inline-block;
-    padding-left: 3px;
-    padding-right: 3px;
-    padding-bottom: 4px;
+    padding: 5px;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(201, 199, 199, 0.5);
+}
+
+.logo2{
+    font-size: 29px;
+    margin: 2px;
 }
 
 .login-btn{
@@ -43,5 +47,6 @@
     background-color: var(--primary-color);
     color: var(--text-color);
     border-radius: 0.2rem;
+    box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2), inset -6px -6px 10px 0 rgba(201, 199, 199, 0.5);
 }
 

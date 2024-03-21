@@ -24,8 +24,14 @@
 .selected {
     background-color: var(--primary-color);
     color: var(--text-color);
+    border: 0px solid ;
+    box-shadow: inset 6px 6px 10px 0 rgba(32, 31, 31, 0.2), inset -6px -6px 10px 0 rgba(201, 199, 199, 0.5);
 }
 
 .linkBtn{
     /* color: var(--text-color); */
+}
+
+.mainContainer{
+    /* overflow-x: scroll; */
 }

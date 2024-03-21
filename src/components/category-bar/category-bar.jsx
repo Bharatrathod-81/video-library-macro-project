@@ -27,7 +27,7 @@ export const CategoryBar = ({ Func }) => {
     }
 
     return (
-        <div>
+        <div className="mainContainer">
             <div className="category-bar-body jstfy-start margin-small ">
                 {categoryArr.map(item => 
                         <div
